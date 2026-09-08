@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-API_BASE_URL = "http://127.0.0.1:8000"
+API_BASE_URL = "https://alert-dashboard-api.onrender.com"
 
 
 def get_api(endpoint, params=None):
