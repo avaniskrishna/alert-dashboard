@@ -15,7 +15,7 @@ def get_api(endpoint, params=None):
     response = requests.get(
         f"{API_BASE_URL}{endpoint}",
         params=params,
-        timeout=10
+        timeout=30
     )
     response.raise_for_status()
     return response.json()
@@ -30,8 +30,11 @@ st.title("🏥 Dozee Vital Alert Operations Dashboard")
 st.caption(
     "Monitor alert volume, response performance, SLA breaches "
     "and operational anomalies."
-    "This dashboard is intended for operational and analytical review. "
-    "It does not replace clinical judgment or patient-care decisions."
+)
+
+st.caption(
+    "For operational and analytical review only — not a substitute for "
+    "clinical judgment or patient-care decisions."
 )
 
 
