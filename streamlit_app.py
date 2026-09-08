@@ -17,4 +17,14 @@ st.markdown(
     """
 )
 
-st.success("Streamlit application is running successfully!")
+# Load the alert dataset
+df = pd.read_csv("alerts (2).csv")
+
+st.subheader("Alert Dataset")
+
+st.write(f"Total records: **{len(df):,}**")
+
+st.dataframe(
+    df,
+    use_container_width=True
+)
